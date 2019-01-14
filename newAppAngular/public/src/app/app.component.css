@@ -1,0 +1,13 @@
+.divy{
+    margin:50px;;
+    display: inline-block;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    vertical-align: top;
+    text-align: right;
+}

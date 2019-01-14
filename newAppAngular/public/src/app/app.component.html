@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="margin: 1rem;">
+  <h1>New Task</h1>
+  <form (submit)="addTask()">
+    <input type=text name = "newTask.title" placeholder="Title" [(ngModel)]="newTask.title"><br>
+    <input type=text name = "newTask.descritpion" placeholder="Description" [(ngModel)]="newTask.description"><br>
+    <button type="submit">Add Task</button>
+  </form>
+</div>
+<div style="margin:auto;">
+  <div class="divy left">
+    <h3>Task List</h3>
+    <div *ngFor="let task of tasks" style="border: solid 1px black; margin: 5px;">
+      <h4>{{task.title}}</h4>
+      <p>{{task.description}}</p>
+      <button (click)="editFields(task)">Edit</button><br>
+      <button (click)="deleteTask(task)">Delete</button>
+    </div>
+
+  </div>
+  <div class="divy right">
+    <h3>Edit Task</h3>
+    <form (submit)="updateFields()">
+      <input type=text name="editTask.title" placeholder="Title" [(ngModel)]="editTask.title" [value]="title"><br>
+      <textarea name="editTask.description"  [(ngModel)]="editTask.description" [value]="desc" placeholder="Description"></textarea><br>
+      <button type="submit">Edit Task</button>
+    </form>
+  </div>
+</div>
+
+
+

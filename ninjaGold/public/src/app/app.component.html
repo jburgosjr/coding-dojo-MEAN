@@ -1,0 +1,46 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center; margin-bottom:30px; ">
+  <button (click)="startNewGame()" class="upperBtn">Start New Game</button> <button (click)="saveGame()" class="upperBtn">Save Game</button>
+</div>
+<div style="text-align:center; margin-bottom:30px; ">
+  <h4>Game id: {{gameId}} </h4>
+  <form (submit)="loadGame()">
+    <input type=text name="game.id" placeholder=" game id" [(ngModel)]="game.id">
+    <button type="submit">Load Game</button>
+  </form>
+</div>
+<div>
+  <h4>Total Gold: {{totalG}} </h4>
+</div>
+<div style="text-align: center;">
+  <div class="select">
+    <h2>Farm</h2>
+    <p>"Earn or loose 2-5 gold"</p>
+    <button (click)="farm()">Get Gold!</button>
+  </div>
+  <div class="select">
+      <h2>Cave</h2>
+      <p>"Earn or loose 5-10 gold"</p>
+      <button (click)="cave()">Get Gold!</button>
+  </div>
+  <div class="select">
+      <h2>House</h2>
+      <p>"Earn or loose 7-15 gold"</p>
+      <button (click)="house()">Get Gold!</button>
+  </div>
+  <div class="select">
+      <h2>Casino</h2>
+      <p>"Earn or loose up to 100 gold"</p>
+      <button (click)="casino()">Get Gold!</button>
+  </div>
+  <div>
+    <h4>Action Log:</h4>
+  </div>
+ 
+</div>
+<div class="log">
+  <p *ngFor="let text of aLog.reverse()">{{text}}</p>
+</div>
+
+
+<router-outlet></router-outlet>

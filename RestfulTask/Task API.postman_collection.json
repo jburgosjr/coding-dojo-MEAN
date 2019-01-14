@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "e0d2d383-0109-457a-9b59-925b71f36300",
+		"name": "Task API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "\"/\" inital get all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"/id : get by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Try to get the request to save\",\n\t\"description\":\"postman doesnt want to save my requests\",\n\t\"completed\":false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/5be39a85618bad5cb43cc80a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"5be39a85618bad5cb43cc80a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"/\":post: adding a task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"waiting for mean to be over with\",\n\t\"description\":\"just 2 more weeks\",\n\t\"completed\":false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task deleted",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"waiting for mean to be over with\",\n\t\"description\":\"just 1 more week\",\n\t\"completed\":false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/5be39c62618bad5cb43cc80c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"5be39c62618bad5cb43cc80c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task updated",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"waiting for mean to be over with\",\n\t\"description\":\"just 1 more week\",\n\t\"completed\":false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/5be39c62618bad5cb43cc80c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"5be39c62618bad5cb43cc80c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
